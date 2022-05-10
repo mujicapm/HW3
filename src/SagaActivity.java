@@ -1,6 +1,7 @@
 // Represents an individual step in a saga which can be rolled back.
 interface SagaActivity
 {
+    SagaActivity setThrowException(Boolean throwException);
     // Attempts to perform the activity. Throws an Exception if the attempt
 // fails for whatever reason (e.g. a network failure)
     void runAction() throws Exception;

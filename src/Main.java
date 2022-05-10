@@ -3,6 +3,8 @@ public class Main {
 
     public static void main(String[] args)
     {
+        //Use ".setThrowException(true)" to set an exception on any activity
+
         //creating a new saga that will SUCCESSFULLY run using the Builder design pattern
         SagaBuilder sagaBuilder = new SagaBuilder().setId(1).activity(new ReserveCarSagaActivity());
         sagaBuilder.activity(new BookHotelSagaActivity());
